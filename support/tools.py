@@ -1,8 +1,8 @@
 from orders.models import Order, RefundRequest
 from django.utils import timezone
-from tracking_data import DELIVERY_DATA
+from .tracking_data import DELIVERY_DATA
 
-def get_order_detail(order_id):
+def get_order_details(order_id):
   try:
     order = Order.objects.get(id=order_id)
     return {
@@ -20,7 +20,7 @@ def get_order_detail(order_id):
     return {"error": f"Order #{order_id} not found."}
   
 def get_refund_history(user_id):
-  refunds = RefundRequest.Objects.filter(user_id=user_id).order_by("-created_at")
+  refunds = RefundRequest.objects.filter(user_id=user_id).order_by("-created_at")
   
   history = []
   

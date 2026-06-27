@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 from decouple import config
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -126,3 +127,7 @@ STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL = '/orders/' # After success of Login Credentials
 LOGOUT_REDIRECT_URL = '/login/' # After Logout
 LOGIN_URL = '/login/'   # redirect to login
+
+ANTHROPIC_API_KEY=config("ANTHROPIC_API_KEY")
+ANTHROPIC_MODEL=config("ANTHROPIC_MODEL")
+

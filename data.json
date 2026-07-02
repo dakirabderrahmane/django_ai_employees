@@ -147,7 +147,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$1200000$us7gAxu8b94E1uWRovgp5K$yW9LPf1XrFNhXvY6W4R2sPPtr9G9jFTW0PNKdkgunlg=",
-    "last_login": "2026-06-27T19:42:15.983Z",
+    "last_login": "2026-07-01T15:07:55.497Z",
     "is_superuser": true,
     "username": "dakir",
     "first_name": "Dakir",
@@ -234,10 +234,10 @@
 },
 {
   "model": "sessions.session",
-  "pk": "e1yx09h8cem66e2sn5o0xinicz9eaabd",
+  "pk": "ddkbseb83nphfv9n4dy2tthx418qozfw",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-xD9Kes5grXc3OIAcKU4qxN0hUgpo38y8l8iwrTVvnZc8kTgLLU6_WwF8cNsB3aHdZolzW5epyF2RB-3yOhM_L4f7d1Ch128dvCPEYp0ZkD1blZRVBnVQ2nDywY80ojExGWcDRSjROfLJJjUAxVDE-wPJ3Dcf:1wdYuu:nZsveLCchupzsWysOXmdKtKcBG7tEpkrg28EDTOYzAY",
-    "expire_date": "2026-07-11T19:42:16.008Z"
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xD9Kes5grXc3OIAcKU4qxN0hUgpo38y8l8iwrTVvnZc8kTgLLU6_WwF8cNsB3aHdZolzW5epyF2RB-3yOhM_L4f7d1Ch128dvCPEYp0ZkD1blZRVBnVQ2nDywY80ojExGWcDRSjROfLJJjUAxVDE-wPJ3Dcf:1wewXb:sM0od4fK1ALAhcMoXwpuy1pgEpvIb5-bZiwnHMdWzR0",
+    "expire_date": "2026-07-15T15:07:55.503Z"
   }
 },
 {
@@ -728,7 +728,7 @@
   "fields": {
     "order": 13,
     "user": 5,
-    "reason": "Want to return � changed my mind",
+    "reason": "Want to return — changed my mind",
     "status": "denied",
     "created_at": "2025-03-10T10:00:00Z"
   }
@@ -1247,4 +1247,168 @@
   "fields": {
     "conversation": 6,
     "event_type": "risk",
-    "message": 
+    "message": "Verdict: Got the data. Here's my full risk assessment:\n\n---\n\n**🔍 Fraud Risk Assessment — User ID 1**\n\n**Risk Level: 🟢 LOW**\n\n---\n\n**Key Signals:**\n\n| Metric | Value |\n|---|---|\n| Total Orders | 5 |\n| Total Ref",
+    "created_at": "2026-06-30T14:08:56.040Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 38,
+  "fields": {
+    "conversation": 6,
+    "event_type": "manager",
+    "message": "Decision: ## ❌ Refund Decision: **DENIED**\n\n---\n\n**Case Summary Review:**\n\n| Field | Detail |\n|---|---|\n| **Customer** | User ID: 1 |\n| **Product** | CoolBreeze 1.5 Ton 3 Star Split AC |\n| **Order Date** | 11 M",
+    "created_at": "2026-06-30T14:09:05.498Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 39,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_result",
+    "message": "escalate_to_manager returned: ## ❌ Refund Decision: **DENIED**\n\n---\n\n**Case Summary Review:**\n\n| Field | Detail |\n|---|---|\n| **Customer** | User ID: 1 |\n| **Product** | CoolBreeze 1.5 Ton 3 Star Split AC |\n| **Order Date** | 11 M",
+    "created_at": "2026-06-30T14:09:05.503Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 40,
+  "fields": {
+    "conversation": 6,
+    "event_type": "final",
+    "message": "I heard back from my manager and unfortunately the refund request has been denied. The main reason is that it has been 476 days since the order was placed, which is well outside our standard return and refund window. Also, no specific reason was provided for the refund request.\n\nIf you have a product defect or issue with the AC, you may still be able to raise a warranty service request. Would you like help with that?",
+    "created_at": "2026-06-30T14:09:08.784Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 41,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_call",
+    "message": "Calling tool get_order_details with {'order_id': 2}",
+    "created_at": "2026-06-30T14:09:38.823Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 42,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_result",
+    "message": "get_order_details returned: {'order_id': 2, 'product name': 'CoolBreeze 1.5 Ton 3 Star Split AC', 'amount': '34999.00', 'status': 'delivered', 'carrier': 'Delhivery', 'tracking_number': 'DL44729103', 'delivery_address': '14, Res",
+    "created_at": "2026-06-30T14:09:38.830Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 43,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_call",
+    "message": "Calling tool get_refund_history with {'user_id': 1}",
+    "created_at": "2026-06-30T14:09:38.835Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 44,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_result",
+    "message": "get_refund_history returned: {'total_refund_requests': 0, 'history': []}",
+    "created_at": "2026-06-30T14:09:38.843Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 45,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_call",
+    "message": "Calling tool escalate_to_manager with {'case_summary': 'Customer User ID: 1\\nOrder ID: 2\\nProduct: CoolBreeze 1.5 Ton 3 Star Split AC\\nAmount: 34999.00\\nOrder Status: Delivered\\nOrdered On: 11 Mar 2025\\nDays Since Order: 476\\nCarrier: Delhivery\\nTracking Number: DL44729103\\nDelivery Address: 14, Residency Road, Shivajinagar, Bangalore - 560025\\n\\nRefund History: No previous refund requests (total: 0)\\n\\nComplaint: Customer is requesting a refund but has not provided a specific reason for the request.'}",
+    "created_at": "2026-06-30T14:09:42.758Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 46,
+  "fields": {
+    "conversation": 6,
+    "event_type": "manager",
+    "message": "Case received for review: Customer User ID: 1\nOrder ID: 2\nProduct: CoolBreeze 1.5 Ton 3 Star Split AC\nAmount: 34999.00\nOrder Status: Delivered\nOrdered On: 11 Mar 2025\nDays Since Order: 476\nCarrier: Delhivery\nTracking Number: D",
+    "created_at": "2026-06-30T14:09:42.765Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 47,
+  "fields": {
+    "conversation": 6,
+    "event_type": "manager",
+    "message": "Consulting risk agent for fraud assessment...",
+    "created_at": "2026-06-30T14:09:44.810Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 48,
+  "fields": {
+    "conversation": 6,
+    "event_type": "risk",
+    "message": "Starting fraud assessment for user 1",
+    "created_at": "2026-06-30T14:09:44.817Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 49,
+  "fields": {
+    "conversation": 6,
+    "event_type": "risk",
+    "message": "Calling get_customer_risk_profile to get customer risk profile...",
+    "created_at": "2026-06-30T14:09:46.893Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 50,
+  "fields": {
+    "conversation": 6,
+    "event_type": "risk",
+    "message": "Verdict: Here is my full risk assessment for user ID 1:\n\n---\n\n**🔍 Fraud Risk Assessment — User ID 1**\n\n**Risk Level: 🟢 LOW**\n\n---\n\n**Key Signals:**\n\n| Metric | Value |\n|---|---|\n| Total Orders | 5 |\n| Total Re",
+    "created_at": "2026-06-30T14:09:54.137Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 51,
+  "fields": {
+    "conversation": 6,
+    "event_type": "manager",
+    "message": "Decision: ## 📋 Refund Decision — Order ID: 2\n\n**Decision: ❌ Deny Refund**\n\n---\n\n### Reason:\n\nWhile the customer's fraud risk profile is clean and their account history is in excellent standing, the refund reque",
+    "created_at": "2026-06-30T14:10:03.543Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 52,
+  "fields": {
+    "conversation": 6,
+    "event_type": "tool_result",
+    "message": "escalate_to_manager returned: ## 📋 Refund Decision — Order ID: 2\n\n**Decision: ❌ Deny Refund**\n\n---\n\n### Reason:\n\nWhile the customer's fraud risk profile is clean and their account history is in excellent standing, the refund reque",
+    "created_at": "2026-06-30T14:10:03.548Z"
+  }
+},
+{
+  "model": "support.agentlog",
+  "pk": 53,
+  "fields": {
+    "conversation": 6,
+    "event_type": "final",
+    "message": "I've checked with my manager and unfortunately the refund request has been denied. The order was placed 476 days ago, which is well past our return window, and no specific reason was provided for the refund.\n\nIf your AC has a defect or isn't working properly, please let me know and I can look into a warranty service request for you instead.",
+    "created_at": "2026-06-30T14:10:06.097Z"
+  }
+}
+]
